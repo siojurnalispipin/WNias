@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { LoginPage } from './../pages/login/login';
+import { Config } from 'ionic-angular/config/config';
 
 @Component({
   templateUrl: 'app.html'
@@ -12,11 +14,26 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+
+    //config ini untuk menyelesaikan masalah ion-slides
+    public config: Config,
+    public splashScreen: SplashScreen
+    ) {
+
+    // all platforms ini untuk mengatasi ion-slides
+		this.config.set( 'scrollPadding', false )
+		this.config.set( 'scrollAssist', false )
+		this.config.set( 'autoFocusAssist', false )
+		// android
+		this.config.set( 'android', 'scrollAssist', true )
+		this.config.set( 'android', 'autoFocusAssist', 'delay' )
     this.initializeApp();
 
     // used for an example of ngFor and navigation
