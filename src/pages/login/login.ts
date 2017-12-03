@@ -18,7 +18,7 @@ export class LoginPage {
   public backgroundImage = 'assets/img/background/background-6.jpg';
 
   constructor(
-    private navCtrl: NavController,
+    public navCtrl: NavController,
     public loadingController: LoadingController,
     public AlertController: AlertController,
     public App: App
