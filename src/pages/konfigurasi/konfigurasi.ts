@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PetunjukPage } from './../petunjuk/petunjuk';
-/**
- * Generated class for the KonfigurasiPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { PetunjukPage } from '../petunjuk/petunjuk';
 
 @IonicPage()
 @Component({
