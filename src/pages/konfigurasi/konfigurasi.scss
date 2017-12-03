@@ -1,3 +1,59 @@
 page-konfigurasi {
 
+  $black-overlay: rgba(16, 229, 237, 0.3);
+  $text-color: #666;
+  $banner-text-color: white;
+  $content-color: whitesmoke;
+  $detail-background: rgba(35, 225, 247, 0.8);
+
+ /* Header */
+ .toolbar-background {
+     border-color: transparent;
+     background: rgba(5, 154, 235, 0.3);
+ }
+
+ .bar-button,
+ .toolbar-title {
+     color: $banner-text-color;
+ }
+
+
+ //ini untuk map
+ page-card-map {
+  ion-card.map-image {
+    position: relative;
+  }
+  ion-card.adv-map p {
+    font-size: 0.7em !important;
+  }
+  button[fab].fab-map {
+    top: calc(100% - 35px);
+    z-index: 50;
+  }
+  .item-bold {
+    font-weight: bold;
+  }
+  ion-content.cards-bg {
+    background-color: #f4f4f7;
+  }
+}
+
+
+//untuk gambar map
+/* Image */
+.housing-image{
+  background-size: cover;
+  height: 30vh;
+  position: relative;
+}
+
+ // HR with text in the middle effect
+ .strike {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
 }

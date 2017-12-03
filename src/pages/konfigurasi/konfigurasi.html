@@ -1,19 +1,62 @@
-<!--
-  Generated template for the KonfigurasiPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
+<ion-header no-border>
   <ion-navbar>
-    <ion-title>konfigurasi</ion-title>
+    <ion-title>Lokasi dan Bahasa</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+  <section class="housing-image"
+  [ngStyle]="{ 'background-image': 'url(' + estateProperty.image + ')'}">
+  </section>
 
-  <button ion-button secondary  (click)="petunjuk()">petunjuk</button>
+  <ion-card *ngFor="let card of cards" class="adv-map">
+    <div class="map-image">
+        <ion-fab right top>
+          <button ion-fab class="fab-map pop-in" (click)="seeInMap(card)">
+          <ion-icon name='pin'></ion-icon>
+        </button>
+        </ion-fab>
+    </div>
+  </ion-card>
+  <!-- ini untuk pilih bahasa -->
+  <ion-item>
+      <ion-label>Lokasi</ion-label>
+      <ion-select [(ngModel)]="lokasi" >
+        <ion-option>Gunungitoli</ion-option>
+        <ion-option>Teluk Dalam</ion-option>
+        <ion-option>Ononamolo</ion-option>
+        <ion-option>Fodo</ion-option>
+        <ion-option>Foa</ion-option>
+        <ion-option>Botobowo</ion-option>
+      </ion-select>
+    </ion-item>
+
+  <!-- ini untuk pilih bahasa -->
+  <ion-item>
+      <ion-label>Bahasa</ion-label>
+      <ion-select [(ngModel)]="bahasa" >
+        <ion-option>Indonesia</ion-option>
+        <ion-option>Nias</ion-option>
+        <ion-option>English</ion-option>
+        <ion-option>Mandarin</ion-option>
+        <ion-option>Russia</ion-option>
+        <ion-option>Japan</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-card>
+          <ion-card-header>
+            Keterangan
+          </ion-card-header>
+          <ion-card-content>
+            Bahasa yang dipilih akan memudahkan kamu menggunakan aplikasi!
+          </ion-card-content>
+
+    </ion-card>
 </ion-content>
+<ion-footer>
+    <button ion-button large full no-margin color="danger" >
+      Simpan
+    </button>
+  </ion-footer>

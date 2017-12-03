@@ -58,7 +58,7 @@ export class PetunjukPage {
   }
 
   skip() {
-    console.log('Skip clicked');
+    this.navCtrl.push(LoginPage);
   }
 
 }
