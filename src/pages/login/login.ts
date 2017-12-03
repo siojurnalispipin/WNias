@@ -1,12 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { AlertController, App, LoadingController, Slides ,IonicPage, NavController } from 'ionic-angular';
+import { KonfigurasiPage } from '../konfigurasi/konfigurasi';
 
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -65,7 +60,7 @@ export class LoginPage {
   }
 
   login(){
-    this.presetLoading('Masuk');
+    this.navCtrl.push(KonfigurasiPage);
   }
 
   signup(){

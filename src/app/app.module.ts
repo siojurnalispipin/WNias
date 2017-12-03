@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { PetunjukPage } from '../pages/petunjuk/petunjuk';
+import { KonfigurasiPage } from '../pages/konfigurasi/konfigurasi';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PetunjukPage } from '../pages/petunjuk/petunjuk';
     HomePage,
     ListPage,
     LoginPage,
-    PetunjukPage
+    PetunjukPage,
+    KonfigurasiPage
 
   ],
   imports: [
@@ -30,7 +32,8 @@ import { PetunjukPage } from '../pages/petunjuk/petunjuk';
     HomePage,
     ListPage,
     LoginPage,
-    PetunjukPage
+    PetunjukPage,
+    KonfigurasiPage
   ],
   providers: [
     StatusBar,
