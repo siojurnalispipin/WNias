@@ -28,5 +28,34 @@
           <h2>{{slide.title}}</h2>
         </ion-slide>
       </ion-slides>
+
+      <ion-card>
+          <ion-card-header>
+            Lokasi Wisata menujuk Pantai Sorake
+          </ion-card-header>
+          <ion-card-content align="justify">
+            Daerah sorake terkenal dengan desa adat yang sangat kental dengan kepercayaan terhadap leluhur atau tetua daerah tersebut. Desa tersebut adalah desa ononiha yang terletak 5Km dari pantai sorake. Warga desa selalu melakukan tarian moyo ketika mereka mengadakan pesta pernikahan sebagai tanda syukur. Hal ini bisa menjadi daya tarik wisatawan untuk datang mengunjungi desa adat tersebut.
+          </ion-card-content>
+        </ion-card>
+
+      <ion-card *ngFor="let card of cards" class="adv-map">
+          <div class="map-image">
+            <img [src]="card.imageUrl">
+            
+          </div>
+          <ion-item *ngFor="let place of card.places" (click)="placeTapped(place)">
+            <ion-icon color="subtle" large item-start [name]='place.icon'></ion-icon>
+            <h2>{{place.name}}</h2>
+            <p>{{place.address}}</p>
+          </ion-item>
+          <ion-item actions>
+            <span item-start ion-text color="secondary" class="item-bold">{{card.ETA}}</span>
+            <span item-start ion-text color="subtle">{{card.distance}}</span>
+            <button ion-button color="primary" clear item-end icon-left (click)="getDirections(card)">
+            <ion-icon name='navigate'></ion-icon>
+            Start
+          </button>
+          </ion-item>
+        </ion-card>
       
 </ion-content>

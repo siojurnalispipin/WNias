@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Config } from 'ionic-angular/config/config';
 import { PetunjukPage } from '../pages/petunjuk/petunjuk';
+
 @Component({
   templateUrl: 'app.html'
 })

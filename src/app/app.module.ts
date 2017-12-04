@@ -14,7 +14,6 @@ import { KonfigurasiPage } from '../pages/konfigurasi/konfigurasi';
 import { DetailwisataPage } from '../pages/detailwisata/detailwisata';
 import { MulaiwisataPage } from '../pages/mulaiwisata/mulaiwisata';
 
-
 @NgModule({
   declarations: [
     MyApp,
@@ -28,7 +27,8 @@ import { MulaiwisataPage } from '../pages/mulaiwisata/mulaiwisata';
 
   ],
   imports: [
-  BrowserModule,
+
+BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
