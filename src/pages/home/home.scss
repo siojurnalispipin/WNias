@@ -35,7 +35,7 @@ page-home {
     }
 
     .card {
-        margin-top: 10px;
+        margin-top: 1px;
     }
 
     ion-avatar {
@@ -72,6 +72,37 @@ page-home {
             height: 5vw !important;
             margin: 6px;
         }
+    }
+
+
+
+    //untuk statis
+   
+    .stats-holder {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    }
+    .user-stats {
+    flex: 1;
+    text-align: center;
+    strong {
+        display: block;
+        float: left;
+        clear: both;
+        width: 100%;
+        color: #B3B1B2;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+    }
+    span {
+        font-size: 26px;
+        color: #5E5E5E;
+        padding: .18em 0;
+        display: inline-block;
+    }
     }
 
 }

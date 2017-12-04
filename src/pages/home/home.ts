@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ViewController } from 'ionic-angular';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -10,6 +11,14 @@ export class HomePage {
   estateProperty = {
     image: 'assets/img/card/advance-card-map-paris.png'
   }
+  posts = [];
+
+  //untuk statistik data
+  user = {
+    followers: 456,
+    following: 1052,
+    tweets: 35
+  };
 
   constructor(public navCtrl: NavController,
   public viewController: ViewController) {

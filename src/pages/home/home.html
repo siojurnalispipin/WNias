@@ -24,7 +24,27 @@
     [ngStyle]="{ 'background-image': 'url(' + estateProperty.image + ')'}">
     </section>
 
+    <div class="card-profile_user-stats">
+        <div class="stats-holder">
+          <div class="user-stats">
+            <strong>Budaya</strong>
+            <span>{{user.tweets}}</span>
+          </div>
+          <div class="user-stats">
+            <strong>Wisata</strong>
+            <span>{{user.following}}</span>
+          </div>
+          <div class="user-stats">
+            <strong>Akomodasi</strong>
+            <span>{{user.followers}}</span>
+          </div>
+        </div>
+      </div>
+
     <!-- //pinterest -->
+    <ion-list-header class="judul">
+        Wisata Rekomendasi
+      </ion-list-header>
     <div class="pins" padding>
         <ion-card class="pin" *ngFor="let post of posts">
           <img [src]="post.image" />
