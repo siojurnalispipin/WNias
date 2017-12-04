@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ViewController } from 'ionic-angular';
-
+import { DetailwisataPage } from '../detailwisata/detailwisata';
 
 @Component({
   selector: 'page-home',
@@ -55,6 +55,10 @@ export class HomePage {
         image: 'assets/imgs/wisata/w6.jpg'
       }
     ];
+  }
+
+  gotoDetailwisata(){
+    this.navCtrl.push(DetailwisataPage);
   }
 
 }

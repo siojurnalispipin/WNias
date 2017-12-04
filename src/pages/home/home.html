@@ -46,7 +46,7 @@
         Wisata Rekomendasi
       </ion-list-header>
     <div class="pins" padding>
-        <ion-card class="pin" *ngFor="let post of posts">
+        <ion-card class="pin" *ngFor="let post of posts" (click)="gotoDetailwisata()">
           <img [src]="post.image" />
           <div *ngIf="post.description" class="post-description">
             <small>{{ post.description }}</small>

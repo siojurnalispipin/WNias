@@ -11,6 +11,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { PetunjukPage } from '../pages/petunjuk/petunjuk';
 import { KonfigurasiPage } from '../pages/konfigurasi/konfigurasi';
+import { DetailwisataPage } from '../pages/detailwisata/detailwisata';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +21,12 @@ import { KonfigurasiPage } from '../pages/konfigurasi/konfigurasi';
     ListPage,
     LoginPage,
     PetunjukPage,
-    KonfigurasiPage
+    KonfigurasiPage,
+    DetailwisataPage
 
   ],
   imports: [
-    BrowserModule,
+   BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -33,7 +36,8 @@ import { KonfigurasiPage } from '../pages/konfigurasi/konfigurasi';
     ListPage,
     LoginPage,
     PetunjukPage,
-    KonfigurasiPage
+    KonfigurasiPage,
+    DetailwisataPage
   ],
   providers: [
     StatusBar,
