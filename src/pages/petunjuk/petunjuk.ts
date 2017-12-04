@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, Slides } from 'ionic-angular';
+import { IonicPage, NavController, Slides, MenuController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 /**
  * Generated class for the PetunjukPage page.
@@ -14,51 +14,35 @@ import { LoginPage } from '../login/login';
   templateUrl: 'petunjuk.html',
 })
 export class PetunjukPage {
-  @ViewChild('slider') slider : Slides;
-  slideIndex = 0;
-  slides = [
-    {
-      title: 'Dream\'s Adventure',
-      imageUrl: 'assets/img/lists/wishlist-1.jpg',
-      description: 'Take a look at our amazing options',
-    },
-    {
-      title: 'For the Weekend',
-      imageUrl: 'assets/img/lists/wishlist-2.jpg',
-      description: 'Take a look at our amazing options',
-    },
-    {
-      title: 'Family Time',
-      imageUrl: 'assets/img/lists/wishlist-3.jpg',
-      description: 'Take a look at our amazing options',
-    },
-    {
-      title: 'My Trip',
-      imageUrl: 'assets/img/lists/wishlist-4.jpg',
-      description: 'Take a look at our amazing options',
-    }
-  ];
-
+  showSkip = true;
+  
+  @ViewChild('slides') slides : Slides;
+  
   constructor(
     public navCtrl: NavController,
+    public menu: MenuController,
 
   ) { }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PetunjukPage');
-  }
-
-  onSlideChanged() {
-    this.slideIndex = this.slider.getActiveIndex();
-    console.log('Slide changed! Current index is', this.slideIndex);
-  }
-
-  goToApp() {
+  startApp() {
     this.navCtrl.push(LoginPage);
   }
 
-  skip() {
-    this.navCtrl.push(LoginPage);
+  onSlideChangeStart(slider: Slides) {
+    this.showSkip = !slider.isEnd();
   }
 
+  ionViewWillEnter() {
+    this.slides.update();
+  }
+
+  ionViewDidEnter() {
+    // the root left menu should be disabled on the tutorial page
+    this.menu.enable(false);
+  }
+
+  ionViewDidLeave() {
+    // enable the root left menu when leaving the tutorial page
+    this.menu.enable(true);
+  }
 }

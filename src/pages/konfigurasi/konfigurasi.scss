@@ -8,8 +8,8 @@ page-konfigurasi {
 
  /* Header */
  .toolbar-background {
-     border-color: transparent;
-     background: rgba(5, 154, 235, 0.3);
+     background: rgba(49, 161, 216, 0.67);
+     //border-color: transparent;
  }
 
  .bar-button,
@@ -19,24 +19,24 @@ page-konfigurasi {
 
 
  //ini untuk map
- page-card-map {
-  ion-card.map-image {
-    position: relative;
+  page-card-map {
+    ion-card.map-image {
+      position: relative;
+    }
+    ion-card.adv-map p {
+      font-size: 0.7em !important;
+    }
+    button[fab].fab-map {
+      top: calc(100% - 35px);
+      z-index: 50;
+    }
+    .item-bold {
+      font-weight: bold;
+    }
+    ion-content.cards-bg {
+      background-color: #f4f4f7;
+    }
   }
-  ion-card.adv-map p {
-    font-size: 0.7em !important;
-  }
-  button[fab].fab-map {
-    top: calc(100% - 35px);
-    z-index: 50;
-  }
-  .item-bold {
-    font-weight: bold;
-  }
-  ion-content.cards-bg {
-    background-color: #f4f4f7;
-  }
-}
 
 
 //untuk gambar map

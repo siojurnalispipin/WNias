@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PetunjukPage } from '../petunjuk/petunjuk';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -51,6 +52,10 @@ export class KonfigurasiPage {
 
   seeInMap(card) {
     alert('Seeing ' + card.name + ' on maps.');
+  }
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
   }
 
 }
