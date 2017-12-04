@@ -1,18 +1,43 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+      <ion-buttons start>
+          <button ion-button>
+            <ion-icon name="contact"></ion-icon>
+          </button>
+        </ion-buttons>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+          Wisata Nias
+        </ion-title>
+        <ion-buttons end>
+          <button ion-button (click)="doClick()">
+            <ion-icon name="more"></ion-icon>
+          </button>
+        </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content fullscreen elestic-header>
+    <section class="housing-image"
+    [ngStyle]="{ 'background-image': 'url(' + estateProperty.image + ')'}">
+    </section>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <!-- //pinterest -->
+    <div class="pins" padding>
+        <ion-card class="pin" *ngFor="let post of posts">
+          <img [src]="post.image" />
+          <div *ngIf="post.description" class="post-description">
+            <small>{{ post.description }}</small>
+          </div>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/imgs/wisata/nias.png">
+            </ion-avatar>
+            <small>Wisata Nias</small>
+            <p><small>Pariwisata Nias</small></p>
+          </ion-item>
+        </ion-card>
+      </div>
 </ion-content>
