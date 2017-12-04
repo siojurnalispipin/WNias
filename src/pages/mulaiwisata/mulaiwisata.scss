@@ -1,0 +1,50 @@
+page-mulaiwisata {
+
+
+  $black-overlay: rgba(16, 229, 237, 0.3);
+  $text-color: #666;
+  $banner-text-color: white;
+  $content-color: whitesmoke;
+  $detail-background: rgba(35, 225, 247, 0.8);
+
+    .toolbar-background {
+        background: rgba(49, 161, 216, 0.67);
+        
+        //border-color: transparent;
+    }
+    .bar-button,
+    .toolbar-title {
+        color: $banner-text-color;
+    }
+
+    ion-slides,
+    .swiper-container {
+      height: 40vh;
+      width: auto;
+    }
+    .swiper-slide {
+      background-size: cover !important;
+      background-position: center !important;
+      color: white;
+    }
+    .swiper-pagination-bullet {
+      background-color: white;
+    }
+
+    // Custom Pagination with Icons
+  .custom-pagination-3.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    border-radius: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  .custom-pagination-3.swiper-pagination-bullet-active {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+    transform: scale(1.5);
+  }
+ 
+}

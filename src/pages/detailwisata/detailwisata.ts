@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { MulaiwisataPage } from '../mulaiwisata/mulaiwisata';
 /**
  * Generated class for the DetailwisataPage page.
  *
@@ -43,6 +43,10 @@ export class DetailwisataPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailwisataPage');
+  }
+
+  gotoMulaiwisata(){
+    this.navCtrl.push(MulaiwisataPage);
   }
 
 }

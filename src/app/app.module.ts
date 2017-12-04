@@ -12,6 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import { PetunjukPage } from '../pages/petunjuk/petunjuk';
 import { KonfigurasiPage } from '../pages/konfigurasi/konfigurasi';
 import { DetailwisataPage } from '../pages/detailwisata/detailwisata';
+import { MulaiwisataPage } from '../pages/mulaiwisata/mulaiwisata';
 
 
 @NgModule({
@@ -22,11 +23,12 @@ import { DetailwisataPage } from '../pages/detailwisata/detailwisata';
     LoginPage,
     PetunjukPage,
     KonfigurasiPage,
-    DetailwisataPage
+    DetailwisataPage,
+    MulaiwisataPage
 
   ],
   imports: [
-   BrowserModule,
+  BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -37,7 +39,8 @@ import { DetailwisataPage } from '../pages/detailwisata/detailwisata';
     LoginPage,
     PetunjukPage,
     KonfigurasiPage,
-    DetailwisataPage
+    DetailwisataPage,
+    MulaiwisataPage
   ],
   providers: [
     StatusBar,
