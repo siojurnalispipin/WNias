@@ -1,0 +1,64 @@
+
+<ion-header no-border>
+  <ion-navbar>
+      <ion-buttons start>
+          <button ion-button>
+            <ion-icon name="contact"></ion-icon>
+          </button>
+        </ion-buttons>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+          Kategori Wisata
+        </ion-title>
+        <ion-buttons end>
+          <button ion-button (click)="doClick()">
+            <ion-icon name="more"></ion-icon>
+          </button>
+        </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+  <ion-content>
+    <div class="padding_helper" color="white" (click)="CategoryTapped()">
+      <div class="category__image">
+        <div class="text-center image__padding">
+          <p class="section__headline">Wisata Budaya Nias</p>
+          <p class="nomargin category__headline">Budaya</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Beginning of the category card -->
+    <div class="padding_helper" color="white" (click)="CategoryTapped2()">
+      <div class="category__image2">
+          <div class="text-center image__padding">
+            <p class="section__headline">
+                Destinasi wisata
+            </p>
+            <p class="nomargin category__headline">
+                Pariwisata
+            </p>
+          </div>
+      </div>
+    </div>
+    <!-- End of the category card -->
+  
+    <!-- Beginning of the category card -->
+    <div class="padding_helper" color="white" (click)="CategoryTapped3()">
+      <div class="category__image3">
+          <div class="text-center image__padding">
+            <p class="section__headline">
+                Bagian Akomodasi
+            </p>
+            <p class="nomargin category__headline">
+                Akomodasi
+            </p>
+          </div>
+      </div>
+    </div>
+    <!-- End of the category card -->
+  
+  </ion-content>

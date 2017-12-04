@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { Config } from 'ionic-angular/config/config';
 import { PetunjukPage } from '../pages/petunjuk/petunjuk';
+import { KategoriwisataPage } from '../pages/kategoriwisata/kategoriwisata';
+import { CariwisataPage } from '../pages/cariwisata/cariwisata';
 
 @Component({
   templateUrl: 'app.html'
@@ -39,7 +41,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'List', component: ListPage },
+      { title: 'Wisata', component: KategoriwisataPage },
+      { title: 'Cari Wisata', component: CariwisataPage }
     ];
 
   }

@@ -1,0 +1,18 @@
+page-cariwisata {
+    $black-overlay: rgba(16, 229, 237, 0.3);
+    $text-color: #666;
+    $banner-text-color: white;
+    $content-color: whitesmoke;
+    $detail-background: rgba(35, 225, 247, 0.8);
+  
+      .toolbar-background {
+          background: rgba(49, 161, 216, 0.67);
+          
+          //border-color: transparent;
+      }
+      .bar-button,
+      .toolbar-title {
+          color: $banner-text-color;
+      }
+  
+}

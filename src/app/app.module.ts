@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -13,6 +14,9 @@ import { PetunjukPage } from '../pages/petunjuk/petunjuk';
 import { KonfigurasiPage } from '../pages/konfigurasi/konfigurasi';
 import { DetailwisataPage } from '../pages/detailwisata/detailwisata';
 import { MulaiwisataPage } from '../pages/mulaiwisata/mulaiwisata';
+import { KategoriwisataPage } from '../pages/kategoriwisata/kategoriwisata';
+import { ItemApiProvider } from '../providers/item-api/item-api';
+import { CariwisataPage } from '../pages/cariwisata/cariwisata';
 
 @NgModule({
   declarations: [
@@ -23,12 +27,15 @@ import { MulaiwisataPage } from '../pages/mulaiwisata/mulaiwisata';
     PetunjukPage,
     KonfigurasiPage,
     DetailwisataPage,
-    MulaiwisataPage
+    MulaiwisataPage,
+    KategoriwisataPage,
+    CariwisataPage
 
   ],
   imports: [
 
-BrowserModule,
+  HttpModule,
+    BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -40,12 +47,15 @@ BrowserModule,
     PetunjukPage,
     KonfigurasiPage,
     DetailwisataPage,
-    MulaiwisataPage
+    MulaiwisataPage,
+    KategoriwisataPage,
+    CariwisataPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ItemApiProvider
   ]
 })
 export class AppModule {}
