@@ -1,5 +1,6 @@
 import { Component, ViewChild} from '@angular/core';
 import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
+import { ProfilPage } from '../profil/profil';
 
 /**
  * Generated class for the MulaiwisataPage page.
@@ -124,6 +125,10 @@ export class MulaiwisataPage {
   
     seeInMap(card) {
       alert('Seeing ' + card.name + ' on maps.');
+    }
+
+    doClick(){
+      this.navCtrl.push(ProfilPage);
     }
 
 }

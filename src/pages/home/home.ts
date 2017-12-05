@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, ViewController } from 'ionic-angular';
 import { DetailwisataPage } from '../detailwisata/detailwisata';
+import { ProfilPage } from '../profil/profil';
 
 @Component({
   selector: 'page-home',
@@ -59,6 +60,9 @@ export class HomePage {
 
   gotoDetailwisata(){
     this.navCtrl.push(DetailwisataPage);
+  }
+  doClick(){
+    this.navCtrl.push(ProfilPage);
   }
 
 }

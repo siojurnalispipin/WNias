@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MulaiwisataPage } from '../mulaiwisata/mulaiwisata';
+import { ProfilPage } from '../profil/profil';
 /**
  * Generated class for the DetailwisataPage page.
  *
@@ -47,6 +48,10 @@ export class DetailwisataPage {
 
   gotoMulaiwisata(){
     this.navCtrl.push(MulaiwisataPage);
+  }
+
+  doClick(){
+    this.navCtrl.push(ProfilPage);
   }
 
 }

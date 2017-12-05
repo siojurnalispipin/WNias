@@ -9,7 +9,7 @@ import { Config } from 'ionic-angular/config/config';
 import { PetunjukPage } from '../pages/petunjuk/petunjuk';
 import { KategoriwisataPage } from '../pages/kategoriwisata/kategoriwisata';
 import { CariwisataPage } from '../pages/cariwisata/cariwisata';
-
+import { ProfilPage } from '../pages/profil/profil';
 
 @Component({
   templateUrl: 'app.html'
@@ -44,7 +44,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Wisata', component: KategoriwisataPage },
-      { title: 'Cari Wisata', component: CariwisataPage }
+      { title: 'Cari Wisata', component: CariwisataPage },
+      { title: 'Profil', component: ProfilPage }
     ];
 
   }
