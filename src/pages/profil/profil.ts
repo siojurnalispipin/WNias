@@ -18,7 +18,7 @@ export class ProfilPage {
   openMenu= false;
   user = {
     name : 'Sio Jurnalis Pipin',
-    profileImage : 'assets/img/avatar/girl-avatar.png',
+    profileImage : 'assets/imgs/wisata/nias.png',
     coverImage: 'assets/background/background-5.jpg',
     occupation: 'Pecinta Alam',
     location : 'Medan, Indonesia',
@@ -55,7 +55,13 @@ export class ProfilPage {
       comments: 66,
       timestamp: '4mo ago'
     },
-  ]
+  ];
+  
+  dummyText: string = `Hello I am autosizing textarea.
+  I automatically adjusts to accommodate my content.
+  I increase and decrease my size based on my content.
+  Try by removing few lines or adding few new lines of text to see what I am able to do.`;
+
 
   constructor(
     public navCtrl: NavController, 

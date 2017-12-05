@@ -10,6 +10,7 @@ import { PetunjukPage } from '../pages/petunjuk/petunjuk';
 import { KategoriwisataPage } from '../pages/kategoriwisata/kategoriwisata';
 import { CariwisataPage } from '../pages/cariwisata/cariwisata';
 import { ProfilPage } from '../pages/profil/profil';
+import { TentangPage } from '../pages/tentang/tentang';
 
 @Component({
   templateUrl: 'app.html'
@@ -45,7 +46,8 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Wisata', component: KategoriwisataPage },
       { title: 'Cari Wisata', component: CariwisataPage },
-      { title: 'Profil', component: ProfilPage }
+      { title: 'Profil', component: ProfilPage },
+      { title: 'Tentang', component: TentangPage }
     ];
 
   }
