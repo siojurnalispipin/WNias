@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { ItemApiProvider } from '../../providers/item-api/item-api';
-import { HomePage } from '../home/home';
+import { IsiwisataPage } from '../isiwisata/isiwisata';
 
 /**
  * Generated class for the CariwisataPage page.
@@ -74,7 +74,7 @@ export class CariwisataPage {
   }
 
   itemTapped($event, item){
-    this.navCtrl.push(HomePage, item);
+    this.navCtrl.push(IsiwisataPage, item);
   }
 
 }

@@ -9,7 +9,7 @@
           <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title>
-          Cari Wisata
+          Wisata
         </ion-title>
         <ion-buttons end>
           <button ion-button (click)="doClick()">
@@ -20,18 +20,31 @@
 </ion-header>
 
 
-<ion-content padding>
-  <!--ini code untuk bar pencarian  -->
-  <ion-searchbar placeholder="Search" (ionInput)="getItems($event)">
-  </ion-searchbar>
+<ion-content>
+  <div class="background_image_header text-center">
+    <br>
 
-  <ion-list>
-    <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-avatar item-left>
-        <img src="{{ item.imgpath }}">
-      </ion-avatar>
-      <h2>{{ item.title }}</h2>
-      <p>{{ item.category }}</p>
-    </ion-item>
-  </ion-list>
+    <!--Judul item  -->
+    <h3 class="headline">
+      {{ item.title }}
+    </h3>
+
+    <br>
+
+    <!--Kategori item  -->
+    <button ion-button round class="btnkategori">{{ item.category }}</button>
+    
+
+    <br>
+    <br>
+    <br>
+
+  </div>
+
+  <!--Kontent  -->
+  <div class="item_content">
+    <p padding>
+      {{ item.description }}
+    </p>
+  </div>
 </ion-content>

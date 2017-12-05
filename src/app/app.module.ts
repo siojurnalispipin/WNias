@@ -17,6 +17,7 @@ import { MulaiwisataPage } from '../pages/mulaiwisata/mulaiwisata';
 import { KategoriwisataPage } from '../pages/kategoriwisata/kategoriwisata';
 import { ItemApiProvider } from '../providers/item-api/item-api';
 import { CariwisataPage } from '../pages/cariwisata/cariwisata';
+import { IsiwisataPage } from '../pages/isiwisata/isiwisata';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CariwisataPage } from '../pages/cariwisata/cariwisata';
     DetailwisataPage,
     MulaiwisataPage,
     KategoriwisataPage,
-    CariwisataPage
+    CariwisataPage,
+    IsiwisataPage
 
   ],
   imports: [
@@ -49,7 +51,8 @@ import { CariwisataPage } from '../pages/cariwisata/cariwisata';
     DetailwisataPage,
     MulaiwisataPage,
     KategoriwisataPage,
-    CariwisataPage
+    CariwisataPage,
+    IsiwisataPage
   ],
   providers: [
     StatusBar,

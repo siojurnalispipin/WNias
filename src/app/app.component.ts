@@ -10,6 +10,7 @@ import { PetunjukPage } from '../pages/petunjuk/petunjuk';
 import { KategoriwisataPage } from '../pages/kategoriwisata/kategoriwisata';
 import { CariwisataPage } from '../pages/cariwisata/cariwisata';
 
+
 @Component({
   templateUrl: 'app.html'
 })

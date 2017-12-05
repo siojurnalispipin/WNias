@@ -1,0 +1,44 @@
+page-isiwisata {
+    $black-overlay: rgba(16, 229, 237, 0.3);
+    $text-color: #666;
+    $banner-text-color: white;
+    $content-color: whitesmoke;
+    $detail-background: rgba(35, 225, 247, 0.8);
+  
+      .toolbar-background {
+          background: rgba(49, 161, 216, 0.67);
+          
+          //border-color: transparent;
+      }
+      .bar-button,
+      .toolbar-title {
+          color: $banner-text-color;
+      }
+
+      .scroll-content {
+        background-color: white;
+    }
+
+    .background_image_header {
+        background-image: url('../assets/background/background-1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .btnkategori{
+        position: absolute;
+        margin-left: 120px;
+    }
+    .headline {
+        color: white;
+        text-align: center;
+    }
+
+    .item_content{
+        margin: 0;
+    }
+    p{
+        margin: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
