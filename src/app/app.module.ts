@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -20,6 +21,8 @@ import { CariwisataPage } from '../pages/cariwisata/cariwisata';
 import { IsiwisataPage } from '../pages/isiwisata/isiwisata';
 import { ProfilPage } from '../pages/profil/profil';
 import { TentangPage } from '../pages/tentang/tentang';
+import { MapsPage } from '../pages/maps/maps';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { TentangPage } from '../pages/tentang/tentang';
     CariwisataPage,
     IsiwisataPage,
     ProfilPage,
-    TentangPage
+    TentangPage,
+    MapsPage
 
   ],
   imports: [
@@ -60,11 +64,13 @@ import { TentangPage } from '../pages/tentang/tentang';
     CariwisataPage,
     IsiwisataPage,
     ProfilPage,
-    TentangPage
+    TentangPage,
+    MapsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ItemApiProvider
   ]
