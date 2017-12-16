@@ -22,7 +22,6 @@ import { IsiwisataPage } from '../pages/isiwisata/isiwisata';
 import { ProfilPage } from '../pages/profil/profil';
 import { TentangPage } from '../pages/tentang/tentang';
 import { MapsPage } from '../pages/maps/maps';
-import { LokasiProvider } from '../providers/lokasi/lokasi';
 
 
 @NgModule({
@@ -73,8 +72,7 @@ import { LokasiProvider } from '../providers/lokasi/lokasi';
     SplashScreen,
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ItemApiProvider,
-    LokasiProvider
+    ItemApiProvider
   ]
 })
 export class AppModule {}
