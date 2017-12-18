@@ -22,6 +22,7 @@ import { IsiwisataPage } from '../pages/isiwisata/isiwisata';
 import { ProfilPage } from '../pages/profil/profil';
 import { TentangPage } from '../pages/tentang/tentang';
 import { MapsPage } from '../pages/maps/maps';
+import { SettingPage } from '../pages/setting/setting';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { MapsPage } from '../pages/maps/maps';
     IsiwisataPage,
     ProfilPage,
     TentangPage,
-    MapsPage
+    MapsPage,
+    SettingPage
 
   ],
   imports: [
@@ -65,7 +67,8 @@ import { MapsPage } from '../pages/maps/maps';
     IsiwisataPage,
     ProfilPage,
     TentangPage,
-    MapsPage
+    MapsPage,
+    SettingPage
   ],
   providers: [
     StatusBar,
