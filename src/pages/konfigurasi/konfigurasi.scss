@@ -6,6 +6,12 @@ page-konfigurasi {
   $content-color: whitesmoke;
   $detail-background: rgba(35, 225, 247, 0.8);
 
+  ion-content {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: transparent;
+  }
  /* Header */
  .toolbar-background {
      background: rgba(49, 161, 216, 0.67);
@@ -55,5 +61,41 @@ page-konfigurasi {
   white-space: nowrap;
 }
 
+.logo {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 2%;
+}
 
+.login-button {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  font-size: 1.2em;
+  span {
+    color: #136475 !important;
+  }
+  // border: 1px solid #fff;
+}
+
+//Maps
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+#map {
+  background-size: cover;
+  height: 40vh;
+  position: relative;
+}
 }

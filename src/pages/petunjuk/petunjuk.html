@@ -1,12 +1,12 @@
 <ion-header no-border>
   <ion-navbar>
     <ion-buttons end *ngIf="showSkip">
-      <button ion-button (click)="startApp()" color="primary">Skip</button>
+      <button ion-button (click)="startApp()" color="Ctext">Skip</button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content no-bounce>
+<ion-content class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}" no-bounce>
   <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
 
     <ion-slide>
@@ -34,7 +34,7 @@
     <ion-slide>
       <img src="assets/imgs/start/ica-slidebox-img-4.png" class="slide-image"/>
       <h2 class="slide-title">Mari berwisata ke Nias!!</h2>
-      <button ion-button icon-end large clear (click)="startApp()">
+      <button ion-button icon-end large clear (click)="startApp()" color="Ctext">
         Let's Go!!
         <ion-icon name="arrow-forward"></ion-icon>
       </button>

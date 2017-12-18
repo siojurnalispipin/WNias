@@ -1,16 +1,9 @@
-<ion-header no-border>
-  <ion-navbar>
-    <ion-title>Lokasi dan Bahasa</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}" padding>
+    <img class="logo" src="assets/imgs/komponen/Konfigurasi.png" />
 
+  <div #map id="map"></div>
 
-<ion-content padding>
-  <section class="housing-image"
-  [ngStyle]="{ 'background-image': 'url(' + estateProperty.image + ')'}">
-  </section>
-
-  <ion-card *ngFor="let card of cards" class="adv-map">
+  <!-- <ion-card *ngFor="let card of cards" class="adv-map">
     <div class="map-image">
         <ion-fab right top>
           <button ion-fab class="fab-map pop-in" (click)="seeInMap(card)">
@@ -18,7 +11,7 @@
         </button>
         </ion-fab>
     </div>
-  </ion-card>
+  </ion-card> -->
   <!-- ini untuk pilih bahasa -->
   <ion-item>
       <ion-label>Lokasi</ion-label>
@@ -45,18 +38,12 @@
       </ion-select>
     </ion-item>
 
-    <ion-card>
-          <ion-card-header>
-            Keterangan
-          </ion-card-header>
-          <ion-card-content>
-            Bahasa yang dipilih akan memudahkan kamu menggunakan aplikasi!
-          </ion-card-content>
-
-    </ion-card>
+    <button ion-button block round (click)="gotoHome()" color="light" class="login-button">Simpan</button>
 </ion-content>
-<ion-footer>
+
+<!-- ini untuk button footer -->
+<!-- <ion-footer>
     <button ion-button large full no-margin color="danger" (click)="gotoHome()" >
       Simpan
     </button>
-  </ion-footer>
+  </ion-footer> -->

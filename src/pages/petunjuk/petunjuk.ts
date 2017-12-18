@@ -14,6 +14,7 @@ import { LoginPage } from '../login/login';
   templateUrl: 'petunjuk.html',
 })
 export class PetunjukPage {
+  public backgroundImage = 'assets/img/background/background-6.jpg';
   showSkip = true;
   
   @ViewChild('slides') slides : Slides;
