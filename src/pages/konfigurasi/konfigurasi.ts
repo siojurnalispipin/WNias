@@ -1,7 +1,10 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, ToastController } from 'ionic-angular';
 import { PetunjukPage } from '../petunjuk/petunjuk';
 import { HomePage } from '../home/home';
+
+//untuk authentikasi
+import { AngularFireAuth } from 'angularfire2/auth';
 
 declare var google;
 @IonicPage()
@@ -42,10 +45,30 @@ export class KonfigurasiPage {
     image: 'assets/img/card/advance-card-map-paris.png',
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    private toast : ToastController,
+    private afAuth : AngularFireAuth,
+    public navCtrl: NavController, 
+    public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
+    this.afAuth.authState.subscribe(
+      data => {
+        if(data && data.email && data.uid){
+          this.toast.create({
+            message: 'Selamat Datang',
+            duration: 3000
+          }).present();
+        }
+        else{
+          this.toast.create({
+            message: 'Data User tidak ditemukan',
+            duration: 3000
+          }).present();
+        }
+      })
+    
     this.initMap();
   }
 

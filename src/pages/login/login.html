@@ -21,14 +21,14 @@
           <div style="padding: 10% 32px 32px 32px">
             <img class="logo1" src="assets/imgs/wisata/nias.png" />
             <ion-item>
-              <ion-label floating>Nama Pengguna</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-label floating>Email</ion-label>
+              <ion-input type="text" [(ngModel)]="user.email"></ion-input>
             </ion-item>
             <ion-item>
               <ion-label floating>Kata Sandi</ion-label>
-              <ion-input type="password"></ion-input>
+              <ion-input type="password" [(ngModel)]="user.password"></ion-input>
             </ion-item>
-            <button ion-button block round (click)="login()" color="light" class="login-button">Masuk</button>
+            <button ion-button block round (click)="login(user)" color="light" class="login-button">Masuk</button>
             
             <button ion-button clear (click)="slideNext()" color="light" class="forgot-button">Lupa kata sandi?</button>
           </div>
@@ -57,26 +57,20 @@
         <ion-icon name="arrow-up"></ion-icon>
       </button>
       <div style="padding: 1% 32px 32px 32px">
-          <img class="logo2" src="assets/imgs/wisata/nias.png" />
+        <img class="logo2" src="assets/imgs/wisata/nias.png" />
         <ion-item>
-          <ion-label floating>Nama Pengguna</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Surel</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="text" [(ngModel)]="user.email"></ion-input>
           </ion-item>
         <ion-item>
           <ion-label floating>Kata Sandi</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input type="password" [(ngModel)]="user.password"></ion-input>
         </ion-item>
-        <ion-item class="margin-bottom">
+        <!-- <ion-item class="margin-bottom">
           <ion-label floating>Konfirmasi kata sandi</ion-label>
           <ion-input type="password"></ion-input>
-        </ion-item>
-        
-        
-        <button ion-button block round (click)="signup()" color="light" class="login-button">DAFTAR</button>
+        </ion-item> -->
+        <button ion-button block round (click)="signup(user)" color="light" class="login-button">DAFTAR</button>
       </div>
 
     </ion-slide>   

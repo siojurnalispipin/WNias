@@ -1,7 +1,10 @@
+import { User } from './../../models/user';
 import { Component, ViewChild } from '@angular/core';
 import { AlertController, App, LoadingController, Slides ,IonicPage, NavController } from 'ionic-angular';
 import { KonfigurasiPage } from '../konfigurasi/konfigurasi';
 
+//untuk authentication
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @IonicPage()
 @Component({
@@ -9,10 +12,14 @@ import { KonfigurasiPage } from '../konfigurasi/konfigurasi';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+
+  user = {} as User;
+
   public loginForm: any;
   public backgroundImage = 'assets/img/background/background-6.jpg';
 
   constructor(
+    private afAuth: AngularFireAuth,
     public navCtrl: NavController,
     public loadingController: LoadingController,
     public AlertController: AlertController,
@@ -20,9 +27,9 @@ export class LoginPage {
 
   ) { }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad LoginPage');
+  // }
 
   @ViewChild('slider') slider: Slides;
   @ViewChild('innerSlider') innerSlider: Slides;
@@ -59,12 +66,27 @@ export class LoginPage {
     loading.present();
   }
 
-  login(){
-    this.navCtrl.push(KonfigurasiPage);
+  async login(user: User){
+    try{
+      const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+      console.log(result);
+      if(result){
+        this.navCtrl.setRoot(KonfigurasiPage);
+      }
+    }
+    catch(e){
+      console.error(e);
+    }
   }
 
-  signup(){
-    this.presetLoading('Terimakasih telah mendaftar ');
+  async signup(user : User){
+    try{
+      const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
+      console.log(result);
+    }
+    catch(e){
+      console.error(e);
+    }
   }
 
   resetPassword(){
